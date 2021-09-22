@@ -1,0 +1,27 @@
+[ 
+    {
+        "day": "Monday",
+        "stop": "U of L",
+        "zip": "40292"
+    },
+    {    
+        "day": "Tuesday",
+        "stop": "GE",
+        "zip": "40228"
+    },
+    {    
+        "day": "Wednesday",
+        "stop": "TPUSA",
+        "zip": "40223"
+    },
+    {    
+        "day": "Thursday",
+        "stop": "Jefferson Mall",
+        "zip": "40219"
+    },
+    {    
+        "day": "Friday",
+        "stop": "Big 4 Bridge",
+        "zip": "40245"
+    }
+]
