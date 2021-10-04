@@ -12,5 +12,10 @@ temp = weather_data['main']['temp']
 
 description = weather_data['weather'][0]['description']
 
-print('\nTemperature : ',temp)
+#convert Kelvin to Farenheight
+kel2far = ((temp * (9/5)) - 459.67)
+tempis = str(round(kel2far, 2))
+
+print('\nTemperature : ', tempis) 
+
 print('\nDescription : ',description)

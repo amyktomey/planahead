@@ -1,12 +1,7 @@
-import weather
-import json
+import locations
+#import weather
 
 #food truck locations
-class loc_data:
-    def __init__(today, stop, zip):
-        def from_json(json_string):
-            json_dict = json.loads(json_string)
-            return loc_data(**json_dict)
 
 #get today's date...
 from datetime import datetime
@@ -18,12 +13,17 @@ now = datetime.now()
 day = now.strftime("%A %m-%d-%Y")
 day_name = now.strftime("%A")
 
+print("Today is ", day)
+
+if day_name  [today]:
+    print('Today is', day_name,'.  The food truck will be at', [stop])
 #error if data requested on Saturday and Sunday
+else:
+    print('The food truck is closed on the weekends.')
 
 
-print('Today is', day)
 
 #weather forecast for today by zipcode
-#print("\nThe weather today at " + zip_code +":\n")
 
-#Menu pre order here (inventory assist) while loop
+
+#print menu items for the day
