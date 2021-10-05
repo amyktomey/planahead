@@ -1,4 +1,5 @@
-import locations
+import json
+import requests
 
 import weather
 
@@ -14,15 +15,16 @@ day_name = now.strftime("%A")
 
 print("Today is ", day)
 
-#import truck location 
-if day_name = [today]:
+#import truck location from json
+
     print('Today is', day_name,'.  The food truck will be at', [stop])
 #error if data requested on Saturday and Sunday
-else:
+    else:
+
     print('The food truck is closed on the weekends.')
 
 #weather forecast
 #print('\nTemperature : ', tempis)
 
 #print('\nDescription : ',description)
-#print menu items for the day
+##print menu items for the day
