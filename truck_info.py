@@ -24,18 +24,20 @@ now = datetime.now()
 day = now.strftime("%A %m-%d-%Y")
 day_name = now.strftime("%A")
 
-print("Today is ", day)
+#print("Today is ", day)
 
 #import truck location from json
 mydictionary = convert_json_to_dict("locations.json")
 
-print(mydictionary)
+#print(mydictionary)
 
-print(f"Today is {day_name}.  The food truck will be at, {mydictionary[day_name]['stop']}")
-# if data requested on Saturday and Sunday
-#f day_name
- #   else:
-  #      print('The food truck is closed on the weekends.')
+#if data requested on Saturday and Sunday
+
+if  ('none') in mydictionary[day_name]['stop']:
+    print('The food truck is closed on the weekends.')
+else:
+    print(f"Today is {day_name}.  The food truck will be at: {mydictionary[day_name]['stop']}")
+  
 
 #weather forecast
 #print('\nTemperature : ', tempis)

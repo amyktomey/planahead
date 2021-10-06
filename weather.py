@@ -1,5 +1,5 @@
 import requests
- 
+
 API_key = "de1b3ad582a8ed4c1efb1e487c14480c"
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
  
@@ -20,4 +20,4 @@ tempis = str(round(kel2far, 2))
 #print('\nTemperature : ', tempis)
 
 
-#print('\nDescription : ',description)
+#0print('\nDescription : ',description)
