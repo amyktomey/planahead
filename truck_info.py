@@ -35,4 +35,4 @@ if 'zip' in (mydictionary[day_name]['zip']):
 else:
     print('No forecast today.')
     
-##print menu items for the day
+#print menu items for the day
