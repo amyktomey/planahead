@@ -1,5 +1,4 @@
 import json
-import requests
 from weather import get_weather
 
 #import truck location from json
@@ -31,8 +30,9 @@ else:
     print(f"Today is {day_name}.  The food truck will be at: {mydictionary[day_name]['stop']}")
 
 #weather forecast
-#ip = int(mydictionary[day_name]['zip'])
-
-#get_weather()
-
+if 'zip' in (mydictionary[day_name]['zip']):
+        get_weather()
+else:
+    print('No forecast today.')
+    
 ##print menu items for the day
