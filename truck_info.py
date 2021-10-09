@@ -1,5 +1,7 @@
 import json
-from weather import get_weather
+
+#weather API function
+
 
 #import truck location from json
 def convert_json_to_dict(myfilepathname):
@@ -21,18 +23,27 @@ now = datetime.now()
 # convert to string
 day = now.strftime("%A %m-%d-%Y")
 day_name = now.strftime("%A")
-#print("Today is ", day)
 
-# today's location
+zip_code = (mydictionary[day_name]['zip'])
+#print("Today is ", day)
+#print(mydictionary[day_name]['zip'])
+#today's location
 if  ('none') in mydictionary[day_name]['stop']:
     print('The food truck is closed on the weekends.')
 else:
     print(f"Today is {day_name}.  The food truck will be at: {mydictionary[day_name]['stop']}")
 
 #weather forecast
-if 'zip' in (mydictionary[day_name]['zip']):
-        get_weather()
-else:
+from weather import get_weather 
+
+zip_code = (mydictionary[day_name]['zip'])
+#print (zip_code)
+
+if zip_code == (""): #(mydictionary[day_name]['zip']):
     print('No forecast today.')
+else:
+    zip_code == (mydictionary[day_name]['zip'])
+    get_weather()
+
     
 #print menu items for the day

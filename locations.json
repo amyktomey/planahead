@@ -4,6 +4,6 @@
     "Wednesday":{"stop": "TPUSA", "zip": "40223"},
     "Thursday":{"stop": "Jefferson Mall", "zip": "40219"},
     "Friday": {"stop": "Big 4 Bridge", "zip": "40245" },
-    "Saturday": {"stop": "none", "zip": "" },
+    "Saturday": {"stop": "home", "zip": "40218" },
     "Sunday": {"stop": "none", "zip": "" }
 }
