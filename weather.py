@@ -5,7 +5,7 @@ def get_weather():
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
     #get zip code from dictionary
-    zip_code = input('zip_code')
+    zip_code = (mydictionary[day_name]['zip'])
 
     Final_url = base_url + "appid=" + API_key + "&zip=" + zip_code
 

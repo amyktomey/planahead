@@ -31,19 +31,47 @@ zip_code = (mydictionary[day_name]['zip'])
 if  ('none') in mydictionary[day_name]['stop']:
     print('The food truck is closed on the weekends.')
 else:
-    print(f"Today is {day_name}.  The food truck will be at: {mydictionary[day_name]['stop']}")
+    print(f"Good morning, {day_name}!  The food truck will be at: {mydictionary[day_name]['stop']}.")
 
 #weather forecast
-from weather import get_weather 
+#import weather #import get_weather 
 
-zip_code = (mydictionary[day_name]['zip'])
+#zip_code = (mydictionary[day_name]['zip'])
 #print (zip_code)
 
-if zip_code == (""): #(mydictionary[day_name]['zip']):
+if zip_code == (mydictionary[day_name]['zip']):
+    import weather
+    import requests
+    API_key = "de1b3ad582a8ed4c1efb1e487c14480c"
+    base_url = "http://api.openweathermap.org/data/2.5/weather?"
+
+    #get zip code from dictionary
+    zip_code = (mydictionary[day_name]['zip'])
+
+    Final_url = base_url + "appid=" + API_key + "&zip=" + zip_code
+
+    weather_data = requests.get(Final_url)
+
+    #print(weather_data)
+
+    forecast = weather_data.json()
+    #print(forecast)
+
+    temp = forecast["main"]["temp"]
+
+    description = forecast['weather'][0]['description']
+
+    #convert Kelvin to Farenheight
+    kel2far = ((temp * (9/5)) - 459.67)
+    tempis = str(round(kel2far, 2))
+
+    print('\nTemperature : ', tempis),
+    print('\nDescription : ', description)
+else:   
     print('No forecast today.')
-else:
-    zip_code == (mydictionary[day_name]['zip'])
-    get_weather()
+
+    
+   
 
     
 #print menu items for the day
