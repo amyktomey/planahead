@@ -13,7 +13,7 @@ Your name is requested. The program pauses, waiting for input.
 
 A fucntion converts json files to dictionary files.
 
-Today's date is captured using *datetime* and compared to the keys in the dictionary, giving the location based on the by day of the week.
+Today's date is captured using *datetime* and compared to the keys in the dictionary, giving the location based on the day of the week.
 
 The weather API grabs the ***zip*** from the dictionary. Temperature is converted from Kelvin to Farenheight. 
 
@@ -22,11 +22,12 @@ Whew! Now, here are your results...
 *(actual display)*
 
 What is your name? Amy
-Good morning, Amy! Today is Tuesday.  The food truck will be at: GE.
 
-Temperature :  69.26
+Good morning, Amy! Today is Tuesday 10-12-2021.  The food truck will be at: GE.
 
-Forecast:  scattered clouds
+Temperature :  70.18
+
+Forecast:  clear sky
 
 :triumph: :tada: :sparkles: :fireworks: :sunglasses:
 
