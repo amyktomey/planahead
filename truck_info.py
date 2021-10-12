@@ -21,9 +21,12 @@ from datetime import datetime
 now = datetime.now()
 
 # convert to string
-day = now.strftime("%A %m-%d-%Y")
+daytime = now.strftime("%X %A %m/%d/%Y")
+day = now.strftime("%A %m/%d/%Y")
 day_name = now.strftime("%A")
+time = now.strftime("%X")
 #print("Today is ", day)
+#print("The time is ", time)
 
 zip_code = (mydictionary[day_name]['zip'])
 #print(mydictionary[day_name]['zip'])
@@ -31,8 +34,9 @@ zip_code = (mydictionary[day_name]['zip'])
 #today's location
 if  ('none') in mydictionary[day_name]['stop']:
     print('The food truck is closed on the weekends.')
+
 else:
-    print(f"Good morning, {name}! Today is {day}.  The food truck will be at: {mydictionary[day_name]['stop']}.")
+    print(f"Good morning, {name}! Today is {day}, it's {time}. The food truck will be at: {mydictionary[day_name]['stop']}.")
 
 # #weather forecast
 
