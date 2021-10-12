@@ -1,6 +1,8 @@
 import json
 import requests
 
+name = input("What is your name?")
+
 #import truck location from json
 def convert_json_to_dict(myfilepathname):
     """get truck locations"""  
@@ -30,7 +32,7 @@ zip_code = (mydictionary[day_name]['zip'])
 if  ('none') in mydictionary[day_name]['stop']:
     print('The food truck is closed on the weekends.')
 else:
-    print(f"Good morning, {day_name}!  The food truck will be at: {mydictionary[day_name]['stop']}.")
+    print(f"Good morning, {name}! Today is {day_name}.  The food truck will be at: {mydictionary[day_name]['stop']}.")
 
 # #weather forecast
 
