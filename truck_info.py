@@ -1,7 +1,7 @@
 import json
 import requests
 
-name = input("What is your name?")
+name = input("What is your name? ")
 
 #import truck location from json
 def convert_json_to_dict(myfilepathname):
@@ -32,7 +32,7 @@ zip_code = (mydictionary[day_name]['zip'])
 if  ('none') in mydictionary[day_name]['stop']:
     print('The food truck is closed on the weekends.')
 else:
-    print(f"Good morning, {name}! Today is {day_name}.  The food truck will be at: {mydictionary[day_name]['stop']}.")
+    print(f"Good morning, {name}! Today is {day}.  The food truck will be at: {mydictionary[day_name]['stop']}.")
 
 # #weather forecast
 
@@ -42,7 +42,7 @@ else:
     API_key = "de1b3ad582a8ed4c1efb1e487c14480c"
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
-#use zip code from dictionary
+    #use zip code from dictionary
     zip_code = (mydictionary[day_name]['zip'])
 
     Final_url = base_url + "appid=" + API_key + "&zip=" + zip_code
@@ -57,11 +57,11 @@ else:
 
     description = forecast['weather'][0]['description']
 
- #convert Kelvin to Farenheight
+    #convert Kelvin to Farenheight
     kel2far = ((temperature * (9/5)) - 459.67)
     tempis = str(round(kel2far, 2))
 
     print('\nTemperature : ', tempis),
-    print('\nDescription : ', description)
+    print('\nForecast: ', description)
   
 #print menu items for the day
