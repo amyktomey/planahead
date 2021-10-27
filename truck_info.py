@@ -1,9 +1,10 @@
 import json
 import requests
 
+#request input from user
 name = input("What is your name? ")
 
-#import truck location from json
+#import locations from json/ set up dictionary
 def convert_json_to_dict(myfilepathname):
     """get truck locations"""  
     try:
@@ -16,22 +17,22 @@ def convert_json_to_dict(myfilepathname):
 mydictionary = convert_json_to_dict("locations.json")
 #print(mydictionary)
 
-#get today's date...
+#get today's date
 from datetime import datetime
 now = datetime.now()
 
-# convert to string
+# convert date/time to string
 daytime = now.strftime("%X %A %m/%d/%Y")
 day = now.strftime("%A %m/%d/%Y")
 day_name = now.strftime("%A")
-time = now.strftime("%X")
+time = now.strftime("%H:%M")
 #print("Today is ", day)
 #print("The time is ", time)
 
 zip_code = (mydictionary[day_name]['zip'])
 #print(mydictionary[day_name]['zip'])
 
-#today's location
+#use today's location for weather info
 if  ('none') in mydictionary[day_name]['stop']:
     print('The food truck is closed on the weekends.')
 
@@ -46,7 +47,7 @@ else:
     API_key = "de1b3ad582a8ed4c1efb1e487c14480c"
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
-    #use zip code from dictionary
+    #use zip code from dictionary for weather information
     zip_code = (mydictionary[day_name]['zip'])
 
     Final_url = base_url + "appid=" + API_key + "&zip=" + zip_code
