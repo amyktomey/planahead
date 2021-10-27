@@ -2,6 +2,8 @@ This app gives food :fork_and_knife: truck info and weather at scheduled locatio
 
 Dear user, if you haven't already...  please *'pip install requests'*. 
 
+:white_check_mark: *Read data from an external file, such as text, JSON, CSV, etc and use that data in your application*
+
 I stored location data in a **_json_** file.  This made updating easier, should the locations change or a special stop be made on the weekend.
 
 Run truck_info.py
@@ -11,11 +13,21 @@ Run truck_info.py
 
 Your name is requested. The program pauses, waiting for input.
 
+:white_check_mark: *Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program*
+
 A fucntion converts json files to dictionary files.
+
+:white_check_mark: *Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event)*
 
 Today's date is captured using *datetime* and compared to the keys in the dictionary, giving the location based on the day of the week.
 
-The weather API grabs the ***zip*** from the dictionary. Temperature is converted from Kelvin to Farenheight. 
+:white_check_mark: *Connect to an external/3rd party API and read data into your app*
+
+The weather API grabs the ***zip*** from the dictionary.
+
+:white_check_mark:*Build a conversion tool that converts user input to another type and displays it (ex: converts cups to grams)*
+
+Temperature is converted from Kelvin to Farenheight. 
 
 Whew! Now, here are your results...
 
