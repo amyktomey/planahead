@@ -2,10 +2,10 @@ import json
 import requests
 from datetime import datetime
 
-#request input from user
+# request input from user
 name = input("What is your name? ")
 
-#import locations from json/ set up dictionary
+# import locations from json/ set up dictionary
 def convert_json_to_dict(myfilepathname):
     """get truck locations"""  
     try:
@@ -17,7 +17,7 @@ def convert_json_to_dict(myfilepathname):
 
 mydictionary = convert_json_to_dict("locations.json")
 
-#get today's date
+# get today's date
 now = datetime.now()
 
 # convert date/time to string
@@ -28,7 +28,7 @@ time = now.strftime("%H:%M")
 
 zip_code = (mydictionary[day_name]["zip"])
 
-#use today's location for weather info
+# use today's location for weather info
 if  ("none") in mydictionary[day_name]["stop"]:
     print("The food truck is closed on the weekends.")
 
@@ -43,7 +43,7 @@ else:
     api_key = "de1b3ad582a8ed4c1efb1e487c14480c"
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
-    #use zip code from dictionary for weather information
+    # use zip code from dictionary for weather information
     zip_code = (mydictionary[day_name]['zip'])
 
     final_url = base_url + "appid=" + api_key + "&zip=" + zip_code
@@ -56,7 +56,7 @@ else:
 
     description = forecast["weather"][0]["description"]
 
-    #convert Kelvin to Farenheight
+    # convert Kelvin to Farenheight
     farenheight = ((kelvin * (9/5)) - 459.67)
     temp_is = str(round(farenheight,))
 
