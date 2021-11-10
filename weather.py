@@ -1,4 +1,3 @@
-
 import requests
 import json
 
@@ -22,7 +21,7 @@ description = forecast['weather'][0]['description']
 
 #convert Kelvin to Farenheight
 kel2far = ((temperature * (9/5)) - 459.67)
-tempis = str(round(kel2far, 2))
+tempis = str(round(kel2far,))
 
-print('\nTemperature : ', tempis),
+print('\nTemperature : ', tempis,chr(176)),
 print('\nDescription : ', description)

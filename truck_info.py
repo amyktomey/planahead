@@ -64,9 +64,7 @@ else:
 
     #convert Kelvin to Farenheight
     kel2far = ((temperature * (9/5)) - 459.67)
-    tempis = str(round(kel2far, 2))
+    tempis = str(round(kel2far,))
 
-    print('\nTemperature : ', tempis),
+    print('\nTemperature : ', tempis,chr(176)),
     print('\nForecast: ', description)
-  
-#print menu items for the day
