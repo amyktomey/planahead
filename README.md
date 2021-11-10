@@ -34,11 +34,9 @@ Whew! Now, here are your results...
 *(actual display)*
 
 What is your name? Amy
-Good morning, Amy! Today is Wednesday 10/27/2021, it's 10:28. The food truck will be at: TPUSA.
+Good morning, Amy! Today is Tuesday 11/09/2021, it's 19:52. The food truck will be at: GE.
 
-Temperature :  45.95
-
-Forecast:  clear sky
+Temperature :  57 °
 
 :triumph: :tada: :sparkles: :fireworks: :sunglasses:
 
