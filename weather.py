@@ -15,13 +15,13 @@ weather_data = requests.get(Final_url)
 forecast = weather_data.json()
 print(forecast)
 
-temperature = forecast["main"]["temp"]
+kelvin = forecast["main"]["temp"]
 
 description = forecast['weather'][0]['description']
 
 #convert Kelvin to Farenheight
-kel2far = ((temperature * (9/5)) - 459.67)
-tempis = str(round(kel2far,))
+farenheight = ((kelvin * (9/5)) - 459.67)
+temp_is = str(round(farenheight,))
 
-print('\nTemperature : ', tempis,chr(176)),
+print('\nTemperature : ', temp_is,chr(176)),
 print('\nDescription : ', description)
