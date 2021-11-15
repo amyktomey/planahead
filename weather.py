@@ -7,9 +7,9 @@ base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
 zip_code = input('Enter a zip Code:')
 
-Final_url = base_url + "appid=" + API_key + "&zip=" + zip_code
+final_url = base_url + "appid=" + API_key + "&zip=" + zip_code
 
-weather_data = requests.get(Final_url)
+weather_data = requests.get(final_url)
 #print(weather_data)
 
 forecast = weather_data.json()

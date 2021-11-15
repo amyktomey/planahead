@@ -26,26 +26,25 @@ day = now.strftime("%A %m/%d/%Y")
 day_name = now.strftime("%A")
 time = now.strftime("%H:%M")
 
+# get truck location
 zip_code = (mydictionary[day_name]["zip"])
 
 # use today's location for weather info
-if  ("none") in mydictionary[day_name]["stop"]:
+if  ("none") in zip_code:
     print("The food truck is closed on the weekends.")
 
 else:
-    print(f"Good morning, {name}! Today is {day}, it's {time}. The food truck will be at: {mydictionary[day_name]['stop']}.")
+    print(f"Hello, {name}! Today is {day}, it's {time}. The food truck will be at: {zip_code}.")
 
 
 # #weather forecast
-if ("none") in mydictionary[day_name]["zip"]:
+if ("none") in zip_code:
     print("No forecast today.")
 else:
     api_key = "de1b3ad582a8ed4c1efb1e487c14480c"
     base_url = "http://api.openweathermap.org/data/2.5/weather?"
 
     # use zip code from dictionary for weather information
-    zip_code = (mydictionary[day_name]['zip'])
-
     final_url = base_url + "appid=" + api_key + "&zip=" + zip_code
 
     weather_data = requests.get(final_url)
