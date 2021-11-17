@@ -7,7 +7,6 @@ Dear user, if you haven't already...  please *'pip install requests'*.
 I stored location data in a **_json_** file.  This made updating easier, should the locations change or a special stop be made on the weekend.
 
 Run truck_info.py
-*(The file weather.py was used for testing purposes, only.)*
 
 **Json** and **requests** install first.
 
@@ -15,7 +14,7 @@ Your name is requested. The program pauses, waiting for input.
 
 :white_check_mark: *Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program*
 
-A fucntion converts json files to dictionary files.
+A function converts json files to dictionary files.
 
 :white_check_mark: *Calculate and display data based on an external factor (ex: get the current date, and display how many days remaining until some event)*
 

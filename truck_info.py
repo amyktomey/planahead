@@ -28,13 +28,13 @@ time = now.strftime("%H:%M")
 
 # get truck location
 zip_code = (mydictionary[day_name]["zip"])
-
+stop = (mydictionary[day_name]["stop"])
 # use today's location for weather info
 if  ("none") in zip_code:
     print("The food truck is closed on the weekends.")
 
 else:
-    print(f"Hello, {name}! Today is {day}, it's {time}. The food truck will be at: {zip_code}.")
+    print(f"Hello, {name}! Today is {day}, it's {time}. The food truck will be at: {stop}.")
 
 
 # #weather forecast
